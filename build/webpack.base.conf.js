@@ -32,7 +32,8 @@ module.exports = {
     // import Vue from 'vue/dist/vue.common.js'可以写成 import Vue from 'vue'
     alias: {
       'src': resolve('src'),
-      'common': resolve('src/common')
+      'common': resolve('src/common'),
+      'components': resolve('src/components')
     }
   },
   module: {

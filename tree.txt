@@ -48,11 +48,11 @@ vue-music
 │              
 │                  
 ├─src
-│  │  App.vue
-│  │  main.js
+│  │  App.vue  //
+│  │  main.js // 程序入口文件
 │  │  
-│  ├─api
-│  ├─common
+│  ├─api  //存放与后台请求接口相关代码，包括Ajax或者jsonP请求
+│  ├─common //存放通用静态资源，包括字体文件、图片，通用JS和样式文件
 │  │  │  logo.png
 │  │  │  
 │  │  ├─fonts
@@ -66,18 +66,18 @@ vue-music
 │  │  │      
 │  │  ├─js
 │  │  └─stylus
-│  │          base.styl
-│  │          icon.styl
-│  │          index.styl
-│  │          mixin.styl
-│  │          reset.styl
-│  │          variable.styl
+│  │          base.styl //基础样式
+│  │          icon.styl // 字体icon
+│  │          index.styl // 在main.js中引入 由webpack打包资源
+│  │          mixin.styl //定义的函数功调用
+│  │          reset.styl //CSS初始化
+│  │          variable.styl  //样式设计统一规范，色调 字体大小
 │  │          
-│  ├─components
-│  ├─router
+│  ├─components  //通用组件
+│  ├─router  //路由
 │  │      index.js
 │  │      
-│  └─store
+│  └─store  //存放vuex相关代码
 └─static
-        .gitkeep
+        .gitkeep 
         
