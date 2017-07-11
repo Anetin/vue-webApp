@@ -1,0 +1,83 @@
+//tree /f > tree.txt
+vue-music
+©¦  .babelrc
+©¦  .editorconfig
+©¦  .eslintignore
+©¦  .eslintrc.js
+©¦  .gitignore
+©¦  .postcssrc.js
+©¦  index.html
+©¦  package.json
+©¦  README.md
+©¦  tree.txt
+©¦  
+©À©¤build
+©¦      build.js
+©¦      check-versions.js
+©¦      dev-client.js
+©¦      dev-server.js
+©¦      utils.js
+©¦      vue-loader.conf.js
+©¦      webpack.base.conf.js
+©¦      webpack.dev.conf.js
+©¦      webpack.prod.conf.js
+©¦      
+©À©¤config
+©¦      dev.env.js
+©¦      index.js
+©¦      prod.env.js
+©¦      
+©À©¤dist
+©¦  ©¦  index.html
+©¦  ©¦  
+©¦  ©¸©¤static
+©¦      ©À©¤css
+©¦      ©¦      app.de70ae8a4845e1a51d2e1ae476a8d445.css
+©¦      ©¦      app.de70ae8a4845e1a51d2e1ae476a8d445.css.map
+©¦      ©¦      
+©¦      ©À©¤img
+©¦      ©¦      music-icon.8a34857.svg
+©¦      ©¦      
+©¦      ©¸©¤js
+©¦              app.9e01d77bf037d0f26f21.js
+©¦              app.9e01d77bf037d0f26f21.js.map
+©¦              manifest.25351bd164658e9c5d31.js
+©¦              manifest.25351bd164658e9c5d31.js.map
+©¦              vendor.c06adbd7e9ababe683f7.js
+©¦              vendor.c06adbd7e9ababe683f7.js.map
+©¦              
+©¦                  
+©À©¤src
+©¦  ©¦  App.vue
+©¦  ©¦  main.js
+©¦  ©¦  
+©¦  ©À©¤api
+©¦  ©À©¤common
+©¦  ©¦  ©¦  logo.png
+©¦  ©¦  ©¦  
+©¦  ©¦  ©À©¤fonts
+©¦  ©¦  ©¦      music-icon.eot
+©¦  ©¦  ©¦      music-icon.svg
+©¦  ©¦  ©¦      music-icon.ttf
+©¦  ©¦  ©¦      music-icon.woff
+©¦  ©¦  ©¦      
+©¦  ©¦  ©À©¤image
+©¦  ©¦  ©¦      default.png
+©¦  ©¦  ©¦      
+©¦  ©¦  ©À©¤js
+©¦  ©¦  ©¸©¤stylus
+©¦  ©¦          base.styl
+©¦  ©¦          icon.styl
+©¦  ©¦          index.styl
+©¦  ©¦          mixin.styl
+©¦  ©¦          reset.styl
+©¦  ©¦          variable.styl
+©¦  ©¦          
+©¦  ©À©¤components
+©¦  ©À©¤router
+©¦  ©¦      index.js
+©¦  ©¦      
+©¦  ©¸©¤store
+©¸©¤static
+        .gitkeep
+        
