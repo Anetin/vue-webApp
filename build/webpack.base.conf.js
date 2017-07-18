@@ -34,20 +34,21 @@ module.exports = {
       'src': resolve('src'),
       'common': resolve('src/common'),
       'components': resolve('src/components'),
-      'api': resolve('src/api')
+      'api': resolve('src/api'),
+      'base': resolve('src/base')
     }
   },
   module: {
     rules: [
-      {// 对src和test文件夹下的.js和.vue文件使用eslint-loader
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
+      // {// 对src和test文件夹下的.js和.vue文件使用eslint-loader
+      //   test: /\.(js|vue)$/,
+      //   loader: 'eslint-loader',
+      //   enforce: 'pre',
+      //   include: [resolve('src'), resolve('test')],
+      //   options: {
+      //     formatter: require('eslint-friendly-formatter')
+      //   }
+      // },
       {// 对所有.vue文件使用vue-loader
         test: /\.vue$/,
         loader: 'vue-loader',
