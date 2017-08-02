@@ -79,7 +79,7 @@ export default {
   components: {
     Slider,
     Scroll,
-		Loading
+    Loading
   }
 }
 </script>
