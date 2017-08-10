@@ -75,6 +75,15 @@
         this.scrollY = pos.y
       },
       _scrollTo(index) {
+        if (!index && index !== 0) {
+          return
+        }
+        if (index < 0) {
+          index = 0
+        } else if (index > this.listHeight.length - 2) {
+          index = this.listHeight.length - 2
+        }
+        this.scrollY = -this.listHeight[index]
         this.$refs.listview.scrollToElement(this.$refs.listGroup[index], 0)
       },
       _calculateHeight() {
@@ -98,15 +107,22 @@
       },
       scrollY(newY) {
         const listHeight = this.listHeight
-        for (var i = 0; i < listHeight.length; i++) {
+        // 当滚动到底部， newY>0
+        if (newY > 0) {
+          this.currentIndex = 0
+          return
+        }
+        // 中间部分
+        for (var i = 0; i < listHeight.length - 1; i++) {
           let height1 = listHeight[i]
           let height2 = listHeight[i + 1]
-          if (!height2 || (-newY > height1 && -newY < height2)) {
+          if (-newY >= height1 && -newY < height2) {
             this.currentIndex = i
             return
           }
         }
-        this.currentIndex = 0
+        // 滚动到底部，且-newYY大于最后一个元素的上限
+        this.currentIndex = listHeight.length - 2
       }
     },
     components: {
