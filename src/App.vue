@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script type="text/babel">
 import MHeader from 'components/m-header/m-header'
 import Tab from 'components/tab/tab'
 

@@ -31,7 +31,7 @@
 	</div>
 </template>
 
-<script type="text/ecmascript-6">
+<script type="text/babel">
 
 import Loading from 'base/loading/loading'
 import Slider from 'base/slider/slider'

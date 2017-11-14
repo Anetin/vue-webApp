@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script type="text/babel">
   export default {}
 </script>
 

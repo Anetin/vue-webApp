@@ -28,7 +28,7 @@
   </scroll>
 </template>
 
-<script type="text/ecmascript-6">
+<script type="text/babel">
   import Scroll from 'base/scroll/scroll'
   import {getData} from 'common/js/dom'
 

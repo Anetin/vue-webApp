@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script type="text/babel">
   import BScroll from 'better-scroll'
 
   export default {
