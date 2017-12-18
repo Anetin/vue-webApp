@@ -8,19 +8,19 @@ const mutations = {
     state.playing = flag
   },
   [types.SET_FULL_SCREEN](state, flag) {
-    state.playing = flag
+    state.fullScreen = flag
   },
   [types.SET_PLAYLIST](state, list) {
-    state.playing = list
+    state.playList = list
   },
   [types.SET_SEQUENCE_LIST](state, list) {
-    state.playing = list
+    state.sequenceList = list
   },
   [types.SET_PLAY_MODE](state, mode) {
-    state.playing = mode
+    state.mode = mode
   },
   [types.SET_CURRENT_INDEX](state, index) {
-    state.playing = index
+    state.currentIndex = index
   }
 }
 export default mutations
