@@ -89,7 +89,9 @@
         this.$router.back()
       },
       random() {
-
+        this.randomPlay({
+          list: this.songs
+        })
       },
       selectItem(item, index) {
         this.selectPlay({
@@ -98,7 +100,8 @@
         })
       },
       ...mapActions([
-        'selectPlay'
+        'selectPlay',
+        'randomPlay'
       ])
 
     },

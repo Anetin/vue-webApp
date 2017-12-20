@@ -25,7 +25,7 @@ module.exports = {
   // 开发过程中使用的配置
   dev: {
     env: require('./dev.env'), // webpack的编译环境
-    port: 8080,
+    port: 8010,
     autoOpenBrowser: false,
     assetsSubDirectory: 'static', // webpack编译输出的二级文件夹
     assetsPublicPath: '/', // webpack编译输出的发布路径
