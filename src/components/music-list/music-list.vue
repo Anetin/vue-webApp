@@ -35,15 +35,15 @@
   import Loading from 'base/loading/loading'
   import SongList from 'base/song-list/song-list'
   import {prefixStyle} from 'common/js/dom'
+  import {playlistMixin} from 'common/js/mixin'
   import {mapActions} from 'vuex'
-  // import {playlistMixin} from 'common/js/mixin'
 
   const RESERVED_HEIGHT = 40
   const transform = prefixStyle('transform')
   const backdrop = prefixStyle('backdrop-filter')
 
   export default {
-    // mixins: [playlistMixin],
+    mixins: [playlistMixin],
     props: {
       bgImage: {
         type: String,
@@ -98,6 +98,11 @@
           list: this.songs,
           index: index
         })
+      },
+      handlePlaylist(playList) {
+        const bottom = playList.length > 0 ? '60px' : ''
+        this.$refs.list.$el.style.bottom = bottom
+        this.$refs.list.refresh()
       },
       ...mapActions([
         'selectPlay',
