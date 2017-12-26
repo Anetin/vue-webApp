@@ -21,6 +21,10 @@ const mutations = {
   },
   [types.SET_CURRENT_INDEX](state, index) {
     state.currentIndex = index
+  },
+  [types.SET_TOP_LIST](state, list) {
+    state.topList = list
   }
+
 }
 export default mutations
