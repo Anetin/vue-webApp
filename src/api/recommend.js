@@ -33,7 +33,31 @@ export function getDiscList() {
   return axios.get(url, {
     params: data
   }).then((res) => {
-    console.log(res)
+    // console.log(res)
+    return Promise.resolve(res.data)
+  })
+}
+
+export function getSongList(disstid) {
+  // const url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg'
+  const url = 'api/reconnendSongList'
+
+  const data = Object.assign({}, commomParams, {
+    disstid,
+    type: 1,
+    // json: 1,
+    format: 'json',
+    utf8: 1,
+    onlysong: 0,
+    platform: 'yqq',
+    hostUin: 0,
+    needNewCode: 0
+  })
+
+  return axios.get(url, {
+    params: data
+  }).then((res) => {
+    // console.log(res)
     return Promise.resolve(res.data)
   })
 }
