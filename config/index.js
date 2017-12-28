@@ -5,6 +5,7 @@ module.exports = {
   // 构建产品时使用的配置
   build: {
     env: require('./prod.env'),
+    port: 8011,
     index: path.resolve(__dirname, '../dist/index.html'), // 编译输入的index.html文件
     assetsRoot: path.resolve(__dirname, '../dist'), // webpack输出的目标文件夹路径
     assetsSubDirectory: 'static', // webpack编译输出的二级文件夹
