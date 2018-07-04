@@ -84,7 +84,7 @@ export default {
         }
       })
     },
-    loadImage() {
+    loadImage() { // 确保轮播图组件加载完成后高度撑开，在让scroll计算高度，防止页面滚动不到底部
       if (!this.checkLoaded) {
         this.$refs.scroll.refresh()
         this.checkLoaded = true

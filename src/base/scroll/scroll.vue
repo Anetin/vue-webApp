@@ -1,4 +1,4 @@
- <template>
+<template>
   <div ref="wrapper">
     <slot></slot>
   </div>
@@ -39,6 +39,7 @@
       }
     },
     mounted() {
+      // this.$nextTick
       setTimeout(() => {
         this._initScroll()
       }, 20)

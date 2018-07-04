@@ -65,9 +65,11 @@
 
           child.style.width = sliderWidth + 'px'
           width += sliderWidth
+          console.log(this.children.length)
         }
-        if (this.loop && !isResize) {
+        if (this.loop && !isResize) { // resize 窗口缩放不加
           width += 2 * sliderWidth
+          console.log(width)
         }
         this.$refs.sliderGroup.style.width = width + 'px'
       },
@@ -80,7 +82,6 @@
           snapLoop: this.loop,
           snapThreshold: 0.3,
           snapSpeed: 400
-
         })
 
         this.slider.on('scrollEnd', () => {
@@ -90,7 +91,7 @@
           }
           this.currentPageIndex = pageIndex
 
-          if (this.autoPlay) {
+          if (this.autoPlay) { // 处理手动轮播的影响
             clearTimeout(this.timer)
             this._play()
           }
