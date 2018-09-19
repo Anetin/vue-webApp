@@ -27,7 +27,7 @@
       },
       ...mapGetters([
         'singer'
-      ])
+      ]) // 取数据语法糖
     },
     created () {
       // console.log(this.singer)
@@ -52,7 +52,7 @@
         list.forEach((item) => {
           let {musicData} = item
           // console.log(musicData)
-          if (musicData.songid && musicData.albummid) {
+          if (musicData.songid && musicData.albummid) { //  必须传的值
             ret.push(createSong(musicData))
           }
         })

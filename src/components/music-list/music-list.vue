@@ -112,7 +112,8 @@
     },
     watch: {
       scrollY(newY) {
-        let translateY = Math.max(this.minTransalteY, newY)
+        console.log(newY)
+        let translateY = Math.max(this.minTransalteY, newY)  // 向上滚动Y是负值
         let zIndex = 0
         let scale = 1
         let blur = 0
@@ -125,16 +126,16 @@
         } else {
           blur = Math.min(20 * percent, 20)
         }
-        this.$refs.filter.style[backdrop] = `blur(${blur}px)`
+        this.$refs.filter.style[backdrop] = `blur(${blur}px)`  //  让图片有高斯模糊的效果
         // this.$refs.filter.style['webkitBackdrop-filter'] = `blur(${blur}px)`
-        if (newY < this.minTransalteY) {
+        if (newY < this.minTransalteY) {  // 滚到顶部
           zIndex = 10
           this.$refs.bgImage.style.paddingTop = 0
           this.$refs.bgImage.style.height = `${RESERVED_HEIGHT}px`
           this.$refs.playBtn.style.display = 'none'
         } else {
           // zIndex = 0
-          this.$refs.bgImage.style.paddingTop = '70%'
+          this.$refs.bgImage.style.paddingTop = '70%' // 复原
           this.$refs.bgImage.style.height = 0
           this.$refs.playBtn.style.display = ''
         }

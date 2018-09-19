@@ -88,7 +88,7 @@
       },
       ...mapMutations({
         setSinger: 'SET_SINGER'
-      })
+      }) // 映射mutation  写数据语法糖
     },
     components: {
       ListView

@@ -1,7 +1,7 @@
 import * as types from './mutation-types'
 
 const mutations = {
-  [types.SET_SINGER](state, singer) {
+  [types.SET_SINGER](state, singer) { // 第一个参数是整个state状态， 第二个是传递的参数
     state.singer = singer
   },
   [types.SET_PLAYING_STATE](state, flag) {

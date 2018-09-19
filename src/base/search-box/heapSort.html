@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+    arr = [20,50,20,40,6,878,70,10,80,30,60,9,44];
+    console.log("排序之前：" + arr);
+
+    heapSort(arr);
+    console.log("排序之后：" + arr);
+
+    function heapSort(arr) {
+      var end = arr.length -1;
+      for (var i = parseInt(arr.length/2) -1; i >= 0; i--) {
+        heapAdjust(arr,i,end);
+      }
+      while(end >= 0) {
+        swap(arr,0,end--);    //将堆顶元素与尾节点交换后，长度减1，尾元素最大
+        heapAdjust(arr,0,end);    //再次对堆进行调整
+      }
+    }
+
+    function heapAdjust(arr,i,end) {
+      var left = 2*i+1, right, flag;
+      while(left <= end){  //判断当前父节点有无左节点（即有无孩子节点，left为左节点）
+        right = left +1;
+        flag = left;
+        if (right <= end && arr[left] < arr[right]) {
+          flag = right;
+        }
+        if(arr[i] < arr[flag])    //将父节点与孩子节点交换（如果上面if为真，则arr[flag]为右节点，如果为假arr[flag]则为左节点）
+            swap(arr,i,flag);
+        else         //说明比孩子节点都大，直接跳出循环语句
+            break;
+        i = flag;
+        left = 2*i+1;
+      }
+    }
+
+    function swap(arr, i, j){
+      var temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+  </script>
+</body>
+</html>

@@ -47,6 +47,7 @@ const Disc = (resolve) => {
 }
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
