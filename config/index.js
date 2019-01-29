@@ -6,10 +6,10 @@ module.exports = {
   build: {
     env: require('./prod.env'),
     port: 8011,
-    index: path.resolve(__dirname, '../dist/index.html'), // 编译输入的index.html文件
-    assetsRoot: path.resolve(__dirname, '../dist'), // webpack输出的目标文件夹路径
+    index: path.resolve(__dirname, '../distFile/index.html'), // 编译输入的index.html文件
+    assetsRoot: path.resolve(__dirname, '../distFile'), // webpack输出的目标文件夹路径
     assetsSubDirectory: 'static', // webpack编译输出的二级文件夹
-    assetsPublicPath: '/', // webpack编译输出的发布路径
+    assetsPublicPath: './', // webpack编译输出的发布路径
     productionSourceMap: true, // 使用SourceMap
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.

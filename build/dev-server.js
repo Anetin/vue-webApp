@@ -43,6 +43,7 @@ apiRoutes.get('/getDiscList', function (req, res) {
     },
     params: req.query
   }).then((response) => {
+    console.log(response.data)
     res.json(response.data)
   }).catch((e) => {
     console.log(e)
@@ -74,7 +75,8 @@ apiRoutes.get('/lyric', function (req, res) {
 })
 
 apiRoutes.get('/reconnendSongList', function (req, res) {
-  var url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg'
+  // var url = 'https://c.y.qq.com/qzone/fcg-bin/fcg_ucc_getcdinfo_byids_cp.fcg'
+  var url = 'https://u.y.qq.com/cgi-bin/musicu.fcg'
 
   axios.get(url, {
     headers: {
@@ -91,7 +93,7 @@ apiRoutes.get('/reconnendSongList', function (req, res) {
         ret = JSON.parse(matches[1])
       }
     }
-    // console.log(ret)
+    console.log(ret)
     res.json(ret)
   }).catch((e) => {
     console.log(e)
